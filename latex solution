@@ -1,0 +1,488 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{amsmath, nccmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{autobreak}
+\allowdisplaybreaks
+\setlength{\arrayrulewidth}{0.2mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
+
+\renewcommand{\baselinestretch}{1.5}
+
+\renewcommand{\vec}[1]{\mathbf{\tilde{#1}}}
+\newcommand{\mat}[1]{\boldsymbol{#1}}
+
+
+
+
+
+\usepackage[a4paper, total={6in, 9in}]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\cfoot{\thepage}
+
+\title{SOLUTIONS OF PROBLEM SET \#1}
+\author{Shreyashri Sarkar, Ritam Dey,Team - Denominators}
+
+\date{28th August , 2020}
+
+\setlength{\parskip}{1em}
+\setlength{\parindent}{4em}
+\renewcommand{\baselinestretch}{1.5}
+
+
+\begin{document}
+
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+
+
+\tableofcontents{}\clearpage
+
+
+
+
+\section{Problem \#1}
+
+The given equation is \begin{equation}
+    x^3+y^3 = (x+y)^2  \qquad x,y \in \mathbb{Z}
+\end{equation}
+
+
+Let, \(h = \frac{x + y}{2}\) , \(a = \frac{x - y}{2}\)
+\begin{align*}
+    \therefore{}&x = h + a \\
+    &y = h - a\end{align*}
+substituting \((h + a)\) and \((h - a)\) in place of x and y in equation 1,
+\begin{equation*}
+\begin{split}
+\quad&(h + a)^3 + (h - a)^3 = (2h)^2 \\ \quad or,&{h^3 + a^3 + 3ha(h + a) + h^3 - a^3 - 3ha(h-a) = 4h^2} \\\quad or, &{2h^3 + 3ha(h + a - h + a) = 4h^2} \\\quad or, &{2h^3 + 6ha^2 = 4h^2} \\\quad or, &{h^3 -  2h^2 + 3ha^2 = 0} \\\quad or, &{h(h^2 - 2h + 3a^2) = 0}\end{split}
+\end{equation*} \par
+
+\[\mbox{either}\: h = 0\: \mbox{or} \:h^2 - 2h + 3a^2 = 0\] \par
+ \textbf{CASE 1}: \underline{$h$ = 0} \\
+without loss of generality, let us take \(a \in \mathbb{Z} ^+\cup \{0\}\) \par
+ $\therefore{}x = 0 + a = a$ and  \\ \quad $y = 0 - a = -a$\\
+ \(\therefore{} (a,-a), \forall{a} \in \mathbb{Z}\setminus \{0\} \mbox{,are in the solution set.}\)
+\par \textbf{CASE 2: } \\ \(h^2 - 2h +3a^2 = 0 \implies\)
+\begin{equation*}
+    \begin{split}
+        h &=\frac{2 \pm \sqrt{4 - 12a^2}}{2}\\ h &= 1\pm \sqrt{1-3a^2}\end{split} 
+        \end{equation*}\par observe that, \\
+i. h is of the form \(\frac{p}{2}\) where,  $p \in \mathbb{Z}$ \\
+ii. a is of the form of \(\frac{q}{2}\) where, $ q \in \mathbb{Z}$ \\ \par
+\begin{equation*}
+    \begin{split}
+\therefore{} h = 1 \pm \sqrt{1 - \frac{3q^2}{4}}\\ \frac{p}{2} = 1 \pm \frac{1}{2}\sqrt{4 - 3q^2}\\
+p = 2 \pm \sqrt{4 - 3q^2}\end{split}
+\end{equation*}\par
+\(\therefore{} \sqrt{4 - 3q^2}\) must be an integer and \(4 - 3q^2 \geq 0\) \\
+\(\therefore{} 4 \geq 3q^2\) \\
+\mbox{or,} \(\frac{4}{3} \geq q^2\) \\
+\mbox{or,} \(-\frac{2}{\sqrt{3}} \leq q \leq \frac{2}{\sqrt{3}}\) \\
+so, possible values of q are -1 , 0, 1. \\
+Corresponding values of p are:
+\begin{center}
+    \begin{tabular}{| c | c | c | c |} \hline
+q & -1 & 0 & 1 \\ [1 ex]\hline
+p & 3,1 & 4,0 & 3,1 \\[1 ex] \hline
+    \end{tabular}
+\end{center} 
+Corresponding values of h and a are:
+\begin{center}
+    \begin{tabular}{| c | c | c | c |} \hline
+$h$& {\Large$-\frac{1}{2}$} & 0 & {\Large$\frac{1}{2}$} \\ [2 ex] \hline
+$a$ & {\Large$\frac{3}{2}$,$\frac{1}{2}$} & 2,0 & {\Large$\frac{3}{2}$,$\frac{1}{2}$ }\\ [2 ex] \hline
+    \end{tabular}
+\end{center} 
+Taking all possible combinations of h and a the values of x and y are:
+\begin{center}
+    \begin{tabular}{| c | c | c | c | c | c | c |} \hline
+x & 0 & 0 & 1 & 1 & 2 & 2\\ [1 ex]\hline
+y & 0 & 1 & 0 & 2 & 1 & 2 \\[1 ex] \hline
+    \end{tabular}
+\end{center}
+$\therefore{}$ The ordered pairs are:\\
+  $\ \ \ \ \ \ \ \ \ \  (0,0) , (0,1) , (1,0) , (1,2) , (2,1) , (2,2)\, \mbox{and}\, (a,-a) \forall{a} \in \mathbb{Z}$
+
+\clearpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Problem \#2} 
+$C_1$ and $C_2$ are two circles tangent to each other and tangent to a line $L$ . $C_1$ is to the left of $C_2$ . $\{C_n\}_{(n\geq3)}$ is  a sequence of circles where $C_n$ is the circle in the region enclosed by the circles $C_{n-1}$ , $C_{n-2}$ and the line $L$. It is also tangent to the three of them. $P_n$ , $r_n$ and $O_n$ are the point of tangency of the circle on the line $L$ , radius and center respectively. Without loss of generality we have taken $r_1<r_2$.\par
+
+\begin{figure}[h]
+\includegraphics[scale=0.5]{geogebra-export5}
+\end{figure}
+
+\noindent
+We derive some necessary quantities.
+
+\begin{equation*}
+\begin{split}
+    |\overline{P_nP_{n+1}}| = |\overline{O_{n}N}| &= \sqrt{|\overline{O_nO_{n+1}}|^2 -| \overline{O_{n+1}N}|^2}\\
+    &= \sqrt{(r_n + r_{n+1})^2 - (r_n-r_{n+1})^2 }\\
+    &= \sqrt{4r_nr_{n+1}}\\
+    &= 2\sqrt{r_nr_{n+1}}
+\end{split}
+\end{equation*}
+\\Here $\overline{O_nN}$ is the perpendicular from $O_n$ to $\overline{O_{n+1}P_{n+1}}$\\
+ \begin{equation}\label{eq1}
+ \therefore{}P_nP_{n+1} = 2\sqrt{r_nr_{n+1}}
+ \end{equation}
+ 
+ \noindent
+Similarly we see that $P_{n}P_{n+2} =  2\sqrt{r_nr_{n+2}}$.
+
+
+\noindent
+Next we prove the result \emph{\( \frac{1}{\sqrt{}r_n} = \frac{1}{\sqrt{r_{n-1}}} + \frac{1}{\sqrt{r_{n-2}}}\)}.  
+
+\noindent Observe that,
+
+\begin{equation}\label{eq2}
+    \begin{split}
+         P_nP_{n+1} &= P_nP_{n+2} + P_{n+2}P_{n+1} \\
+or, 2\sqrt{r_nr_{n+1}} &= 2\sqrt{r_nr_{n+2}} + 2\sqrt{r_{n+2}r_{n+1}} \\
+or,\quad \frac{1}{\sqrt{r_{n+2}}} &= \frac{1}{\sqrt{r_{n+1}}}+\frac{1}{\sqrt{r_n}}
+    \end{split}
+\end{equation}
+\noindent
+\textbf{\textit{Claim.}}\emph{\( \frac{1}{\sqrt{r_n}}= \frac{F_{n-1}}{\sqrt{r_2}} + \frac{F_{n-2}}{\sqrt{r_1}}\)}, where $F_n$ is the Fibonacci sequence defines by 
+\[ F_1 = 1, F_2 = 1 , F_n = F_{n-1} + F_{n-2}\]
+\begin{proof}
+The hypothesis is true for the base case \(n = 3\) since we may put \(n=3\) in equation 2 and get the desired result. Suppose it is true for \(n= 3, 4, \cdots ,k\). Now we put \(n = k+1\) in equation 2 and get 
+   \begin{equation*}
+   \begin{split}
+        \frac{1}{\sqrt{r_{k+1}}} &= \frac{1}{\sqrt{r_{k}}} + \frac{1}{\sqrt{r_{k-1}}}\\
+                 \mbox{or,}\, \frac{1}{\sqrt{r_{k+1}}} &= \frac{F_{k-1}}{\sqrt{r_2}} + \frac{F_{k-2}}{\sqrt{r_1}} + \frac{F_{k-2}}{\sqrt{r_2}}+ \frac{F_{k-3}}{\sqrt{r_1}}\\
+                 \mbox{or,}\, \frac{1}{\sqrt{r_{k+1}}} &= \bigg(\frac{F_{k-1}}{\sqrt{r_2}}+\frac{F_{k-2}}{\sqrt{r_2}}\bigg) +\bigg(\frac{F_{k-2}}{\sqrt{r_1}}+\frac{F_{k-3}}{\sqrt{r_1}}\bigg)\\
+                 \mbox{or,}\, \frac{1}{\sqrt{r_{k+1}}} &= \frac{F_{k}}{\sqrt{r_2}} + \frac{F_{k-1}}{\sqrt{r_1}}
+                 \end{split}
+            \end{equation*}  \par Which completes the induction (strong form).
+\end{proof}
+It is trivial to note that  $\forall{n} \in \mathbb{N}$ , $r_n > 0$.
+
+
+\noindent
+\textbf{Proof for part a}\par
+
+The approach of the proof is like this, we proof that the sequence $s_n = |P_nP_{n+1}|$ converges to 0 and hence the point $P_n$ comes closure to some fixed point (designate as $P_{\infty}$) which is also the limiting point of $P_n$.\par
+A straight line segment $\overline{AB}$ line can be considered as set of all point from $A$ to $B$. Circle  $C_n$ lies inside the region enclosed by the circles $C_{n-1}$ , $C_{n-2}$ and the line $L$ and the point of tangency $P_n$ lies between $P_{n-1}$ and $P_{n-2}$. So it is trivial to note that $P_nP_{n-1} \subset P_{n-1}P_{n-2}$ (the proper inclusion is due to the fact that the compliment $|P_{n-1}P_{n-2}\setminus P_nP_{n-1}| = |P_nP_{n-2}| = 2\sqrt{r_nr_{n-2}} > 0$  ). \\
+\noindent
+$\therefore{} P_{n+2}P_{n+1} < P_{n+1}P_{n}$ \emph{i.e.} $\{s_n\}_{n\geq 1}$ is decreasing.\\
+Also, $s_n = |P_{n}P_{n+1}| > 0$ , \emph{i.e.} $s_n$ is bounded below by 0.\par
+\noindent
+\textbf{Theorem.} Monotone bounded sequences are convergent.\\
+$\therefore{} s_n$ converges.\par
+\noindent
+\textbf{\textit{Claim}} $s_n$ converges to 0.
+\begin{proof}
+  Fix an arbitrary $\epsilon>0 $\\
+let, $|s_n- 0|=|s_n| < \epsilon $ 
+\begin{equation*}
+\begin{split}
+  |2\sqrt{r_nr_{n+1}}| &= \bigg|\frac{2}{\frac{1}{\sqrt{r_nr_{n+1}}}}\bigg|
+  \\ &=\Bigg|\frac{2}{\bigg(\frac{F_{n-1}}{\sqrt{r_2}}+\frac{F_{n-2}}{\sqrt{r_1}}\bigg)\bigg(\frac{F_{n}}{\sqrt{r_2}}+\frac{F_{n-1}}{\sqrt{r_1}}\bigg) }\Bigg|\\&=\bigg|{\frac{2r_1r_2}{(F_{n-1}\sqrt{r_1} + F_{n-2}\sqrt{r_2})(F_{n}\sqrt{r_1} + F_{n-1}\sqrt{r_2})}}\bigg|\\&<\bigg|{\frac{2r_1r_2}{({(n-1)}\sqrt{r_1} + {(n-2)}\sqrt{r_1})({n}\sqrt{r_1} + {(n-1)}\sqrt{r_1})}}\bigg|\\&\mbox{\hspace{0.5\textwidth}\{Since $F_n>n$ for $n>3$ and $r_2>r_1$\}}\\&\quad\bigg|{\frac{2r_2}{((n-1) + (n-2))(n + (n-1))}}\bigg|= \bigg|{\frac{2r_2}{{(2n - 3)(2n-1)}}}\bigg|<\frac{2r_n}{n^2}\end{split}
+ \end{equation*}
+  Since for $n\geq3,\quad 2n-1>2n-3\geq n$ \newline \hspace{1cm} If we choose, $m>$ {\Large $\sqrt{\frac{2r_2}{\epsilon}}$} then $\forall{n}>m$ we have \\
+  \[
+ |s_n| < \frac{2r_n}{n^2} < \frac{2r_n}{m^2}<\epsilon
+  \]\par Since $\epsilon$ is arbitrary, we conclude that $s_n$ converges to 0.\end{proof}
+  \noindent
+\textbf{Proof for part b}\par
+For simplicity of calculation we let $R_n = \frac{1}{\sqrt{r_n}}$, $c_n = |\overline{P_nP_2}|$ , $s_n=|\overline{P_nP_{n+1}}|$. It is trivial to note that $c_n = \sum_{i=2}^{n-1}(-1)^is_i$. 
+\begin{equation}
+    \begin{split}
+        c_n &= \sum_{i=2}^{n-1}(-1)^is_i\\&=2\sum_{i=2}^{n-1}(-1)^i\sqrt{r_ir_{i+1}}\\&=2\sum_{i=2}^{n-1}\frac{(-1)^i}{R_iR_{i+1}}
+    \end{split}
+\end{equation}
+\noindent
+\noindent
+\textbf{\text{Result.}} $R_iR_{i+2}- R_{i+1}^2= (-1)^{i-1}(R_1^2 + R_1R_2 - R_2^2)$
+\begin{proof}
+$R_{i+1} = R_i+ R_{i-1}$
+  \hspace{4cm}$R_{i+1} = R_{i+2}-R_i$\par multiplying both we get,
+  \begin{equation*}\begin{split}
+     & R_{i+1}^2 = (R_i+R_{i-1})(R_{i+2}-R_i)\\
+      or,\,&R_{i+1}^2=R_iR_{i+2} - R_i^2+R_{i-1}R_{i+2} - R_{i-1}R_i\\
+      or,\,&-R_iR_{i+2}+R_{i+1}^2 = R_{i-1}(R_{i+2} - R_i) - R_i^2\\
+      or,\,&R_iR_{i+2} - R_{i+1}^2 = -(R_{i-1}R_{i+1} - R_i^2)\\
+      &\hspace{0.15\textwidth{}}=(-1)^2(R_{i-2}R_i - R_{i-1}^2)\\
+      &\hspace{0.27\textwidth{}} \vdots\\
+      &\hspace{0.15\textwidth{}}= (-1)^{i-1}(R_1R_3 - R_2^2)\\
+       &\hspace{0.15\textwidth{}}= (-1)^{i-1}(R_1^2 + R_1R_2 - R_2^2)
+  \end{split}
+  \end{equation*}
+  \end{proof}
+  We get , \[(-1)^{i-1}=\frac{R_iR_{i+2} - R_{i+1}^2}{R_1^2 + R_1R_2 - R_2^2}
+  \]\par
+ \begin{fleqn}
+ \begin{equation*}
+    \begin{split}
+ \mbox{Now , } c_n& = -2\sum_{i=2}^{n-1}\frac{R_{i}R_{i+2} - R_{i+1}^2}{R_iR_{i+1}(R_1^2 + R_1R_2 - R_2^2)}\\
+ &=-\frac{2}{(R_1^2 + R_1R_2-R_2^2)}\sum_{i=2}^{n-1}\bigg(\frac{R_{i+2}}{R_{i+1}}-\frac{R_{i+1}}{R_i}\bigg)\\
+ &= -\frac{2}{(R_1^2 + R_1R_2-R_2^2)}\bigg(\frac{R_{n+1}}{R_{n}}-\frac{R_{3}}{R_2}\bigg)
+ \end{split}
+ \end{equation*}
+ \end{fleqn}\par
+ Since $\lim_{n\rightarrow{\infty}}c_n$ exists, we can talk about the limit of $\frac{R_{n+1}}{R_n}$ .
+ \begin{fleqn}
+ \begin{equation*}
+ \begin{split}
+     \lim_{n\rightarrow{\infty}}\frac{R_{n+1}}{R_n} &= \lim_{n\rightarrow{\infty}}\frac{F_nR_2 + F_{n-1}R_1}{F_{n-1}R_2+F_{n-2}R_1} \quad \mbox{\{ $\frac{1}{\sqrt{r_{k+1}}} = \frac{F_{k}}{\sqrt{r_2}} + \frac{F_{k-1}}{\sqrt{r_1}}$\}}\\
+     &= \lim_{n\rightarrow{\infty}}\frac{\Big(\frac{F_n}{F_{n-1}}\Big)\Big(\frac{R_2}{R_1}\Big) + 1}{\frac{R_2}{R_1}+\frac{F_{n-2}}{F_{n-1}}}\quad\mbox{\{dividing numerator and denominator by $F_{n-1}R_1$\}}\\
+     &= \frac{\frac{R_2}{R_1}\lim_{n\rightarrow{\infty}}\frac{F_n}{F_{n-1}} +1}{\frac{R_2}{R_1}+\lim_{n\rightarrow{\infty}}\frac{F_{n-2}}{F_{n-1}}}\\
+     &=\frac{b\varphi+1}{b+\frac{1}{\varphi}} \quad \mbox{\{ b = $\frac{R_2}{R_1}$\}}\\
+     &= \varphi\bigg(\frac{b\varphi +1}{b\varphi+1}\bigg) = \varphi
+     \end{split}
+ \end{equation*}
+ \end{fleqn}\\
+ We have used the fact that {\normalsize\( \boxed{\lim_{n\rightarrow{\infty}}\frac{F_n}{F_{n-1}}=\frac{1+\sqrt{5}}{2}= \varphi }\)} \qquad \{refer to page no. 21\}
+ \[
+ \therefore{}\lim_{n\rightarrow{\infty}}c_n = \frac{2\Big(1+\frac{R_1}{R_2} - \varphi\Big)}{(R_1^2 + R_1R_2-R_2^2)} = c_{\infty} = |\overline{P_2P_{\infty}}|
+ \]\par
+According to the question the limiting point divides the the line $\overline{P_1P_2}$ in the ratio 1:1.  $$\therefore{}|\overline{P_1P_{\infty}}| =|\overline{P_2P_{\infty}}| = c_{\infty} = \frac{1}{2}|\overline{P_1P_2}| = \sqrt{r_1r_2} = \frac{1}{R_1R_2}$$
+\begin{fleqn}
+\begin{equation*}
+    \begin{split}
+     \therefore{}&\frac{1}{R_1R_2}= \frac{2\Big(1+\frac{R_1}{R_2} - \varphi\Big)}{(R_1^2 + R_1R_2-R_2^2)}\\
+     or,\,&\frac{R_1}{R_2} + 1 - \frac{R_2}{R_1} = 2\Big(1+\frac{R_1}{R_2} - \varphi\Big)\\
+     or,\,&\frac{1}{b} + 1 - b = 2(1+\frac{1}{b} - \varphi)\\
+     or,\,&1 + b -b^2 = 2(b+ 1 -\varphi b)\\
+     or, \, &-b^2 + b(2\varphi - 1) -1 = 0 \\
+     or,\,&-b^2 + \sqrt{5}b - 1= 0\\
+     or,\,& b^2 - \sqrt{5}b + 1 = 0  
+   \end{split}
+\end{equation*}
+\end{fleqn}
+the two possible choices of $b$ are, \[ b = \frac{\sqrt{5}\pm 1}{2}\]
+According to our \emph{fig. 1} we have taken $r_1<r_2\implies R_1>R_2 \implies b <1$.therefore , we take
+\[
+\begin{split}
+& b= \frac{\sqrt{5}-1}{2}\\
+ or,\, &\frac{R_2}{R_1}=  \frac{\sqrt{5}-1}{2}\\
+ or,\,&\frac{r_1}{r_2}=\bigg(\frac{\sqrt{5}-1}{2}\bigg)^2\\
+ or,\,&\frac{r_1}{r_2}=\bigg(\frac{3- \sqrt{5}}{2}\bigg)
+ \end{split}
+\]
+Since the system of circles aree symmetric, that is for any choice of the radii the point will converge to the midpoint so the common ration is $r_1:r_2 = 3+\sqrt{2}:2$.
+\clearpage
+
+
+
+
+
+
+
+
+
+\section{Problem \#3}
+\textbf{Answer for a}\par
+ A prism with its base being an equilateral triangle and the three faces being all squares is example of such an object. 
+ \begin{figure}[h]
+ \includegraphics[scale= 0.7]{prism2}
+ \end{figure}\par
+\noindent
+\textbf{Answer for part b}\par
+We do some backward  calculations and look for such points. We observe that $2016 = \frac{63\times64}{2} = \binom{64}{2}$. So we may try looking for a \emph{'set'} of \emph{'something'} having 64 elements and map every 2 element subset of that to $\mathbb{R}^{63}$. If the mapping turns out to be bijective and the set of those points posses the desired property then we are done. \par let  us consider cases for some smaller dimensions. For $n= 2$ any isosceles triangle with any two side lengths will do. Again the number of such points in $\binom{3}{2} = 3$ (A regular pentagon also has the desired property but taking the triangle in this case is for the sake of the conjectured formula to work). For the case $n=3$ the if we want to get \(\binom{4}{2} = 6\) points , then the easiest construction is the set \{\((\pm1,0,0),(0,\pm1,0), (0,0,\pm1)\)\}. \par
+\begin{figure}[h]
+\hspace{2cm}
+\includegraphics[scale=0.4]{tetrahedral}
+\end{figure}\par
+Indeed the two distances are 2 unit and $\sqrt{2}$ unit. To find those 4 \emph{'somethings'} look at three points (pair of one \emph{'thing'} with another 3 \emph{'things'}), like if we put 4 tetrahedrals on four faces.
+\begin{figure}[h]
+\hspace{2cm}\includegraphics[scale=0.4]{tetra2}
+\end{figure}\par
+It is easily seen that the combined figure is another tetrahedral.
+So it surprisingly turns out that the 6 points are the mid points of the six edges of the big tetrahedral which are the joining lines of the \textbf{4 vertices} taken 2 at a time. In case of $n=4$ if we take a regular polyhedron with 4 vertices as the unit vectors and (a,a,a,a) with $a = \frac{1+\sqrt{5}}{4}$ then again the hunch works. Based on the intuitions we guess the following set of points in $\mathbb{R}^{63}$ \par
+\noindent
+\textbf{\textit{Claim.}} Consider the set of all 2016 mid points of 2016 edges of a regular polyhedron with 64 vertices in $\mathbb{R}^{63}$. The distances between any two points in the set  is either $\frac{s}{2}$ or $\frac{s}{\sqrt{2}}$ where a is the length of one edge of the polyhedron. (Our finding)
+\begin{proof}
+Every tetrahedron is similar in the sense that one can get any tetrahedron by translating rotating and re-scaling another tetrahedron in \(\mathbb{R}^3\). we extend the notion in \(\mathbb{R}^n\) and show this considering the regular 64-hedron with 63 of its vertices being the 63 unit vectors in \(\mathbb{R}^{63}\). the 64th vertex is of the form $(a,a,..63\,times)$.
+\begin{equation*}
+\begin{split}
+&(a-1)^2 + (n-1)a^2 = \|\vec{e_i}-\vec{e_j}\|^2= 2\\
+&\hspace{2cm}\mbox{\{$e_i$ is the unit vector with ith element being 1 amd rest are 0\}}\\
+or,\,&na^2-2a-1=0
+\end{split}
+\end{equation*}
+$\therefore{}a = {\large \frac{2\pm\sqrt{4+4n}}{2n}} = \frac{1\pm\sqrt{1+n}}{n}$\par
+\noindent
+For $n=63, a = \frac{1}{7}, \frac{1}{9}$.We take $a = \frac{1}{7}$.
+\par Therefore the mid-points are of the form\\ (i) $(x_1,x_2,\cdots,x_{n})$($n=63$ in our case) with $x_i=x_j = \frac{1}{2} $  with rest of the elements are 0 for all possible $1\leq i<j \leq n (=63)$. These are the mid-points of the unit vectors taken two at a time. Total number of such points is $\binom{n}{2}=\binom{63}{2}=1953$.Denote the set of all such points by $A$.\\
+(ii) $(x_1,x_2,\cdots,x_{n})$ with $x_i=\frac{a+1}{2}$ and rest of the elements are 0 for $i=1,2,\cdots,n$. These are the midpoints of $(a,a,..n\,times)$ and each unit vector. There are 63 such points. Denote the set of all such points by $B$.\par So total number of such points are $\binom{n}{2}+n= \frac{n(n+1)}{2} = \frac{63\times64}{2}$ = 2016. Now we find the distances between the points.\\
+\underline{First case}, is the distance between two points belonging to the set $A$ with the ith element being $\frac{1}{2}$ for both of the points. The distance will be \(\sqrt{(\frac{1}{2})^2 + (\frac{1}{2})^2} = \frac{1}{\sqrt{2}}\).\\
+\underline{Second case}, is the distance between two points belonging to the set $A$ with no corresponding $x_i$'s being equal. In that case the distance will be \(\sqrt{(\frac{1}{2})^2+(\frac{1}{2})^2+(\frac{1}{2})^2+(\frac{1}{2})^2}=1\)\\
+\underline{Third case}, is the distance between two points belonging to the set $B$. The distance will be \(\sqrt{(\frac{a+1}{2}- \frac{a}{2})^2+(\frac{a}{2}- \frac{a+1}{2})^2+ 0}= \frac{1}{\sqrt{2}}\) .\\
+\underline{Fourth case}, is the distance between two points, one belonging to set $A$ and another belonging to the set $B$ .The ith element in this case is $\frac{1}{2}$ for the first vector and $\frac{a+1}{2}$ for the other vector, rest are usual. The distance in this case is \[
+\begin{split}&\sqrt{(\frac{a+1}{2}-\frac{1}{2})^2+(\frac{a}{2}-\frac{1}{2})^2+(n-2)(\frac{a}{2})^2}\\=&\sqrt{\frac{a^2}{4}+ \frac{(a-1)^2}{4}+ \frac{(n-2)a^2}{4}}\\
+=&\sqrt{\frac{(a-1)^2+(n-1)a^2}{4}}\\
+=&\sqrt{\frac{2}{4}}\\
+=&\frac{1}{\sqrt{2}}
+\end{split}
+\]
+\underline{Fifth case}, is the distance between two points, one belonging to set $A$ and another belonging to the set $B$.The ith element in this case is 0 for the first vector and $\frac{a+1}{2}$ for the other vector, rest are usual. The distance in this case is \[
+\begin{split}
+&\sqrt{(\frac{a+1}{2})^2+ 2(\frac{a}{2}-\frac{1}{2})^2 +(n-3)(\frac{a}{2})^2 }\\
+=&\sqrt{\frac{(a+1)^2}{4}+ \frac{2(a-1)^2}{4} +\frac{(n-3)a^2}{4}}\\
+=&\sqrt{\frac{(a-1)^2+2(a^2+1)+ (n-3)a^2}{4}}\\
+=&\sqrt{\frac{(a-1)^2+(n-1)a^2 + 2}{4}}\\
+=&\sqrt{\frac{2+2}{4}}=1
+\end{split}
+\]
+
+Length of one edge of the polyhedron is $\sqrt{2}$ unit.If we re-scale the figure and make the edge of length $s$ (which means we are squeezing the coordinate system by a factor of  $\frac{s}{\sqrt{2}}$) then the two distances also scales up to \(\frac{s}{\sqrt{2}}\) and \(\frac{s}{2}\) . 
+
+
+\end{proof}
+\noindent
+\textbf{Answer for part c}
+\par
+As we have seen in \emph{part b} that finding points through a polyhedron works well for the case $n=3$. Even the calculations in \emph{part b}  suggests that the idea works for any n, and for $n=63$ we have the result of the question. So we claim that \textbf{{\large \textit{We  can always find $\frac{n(n+1)}{2}$ points in an $n-dimensional$ space such that the distance between any two points is either $s$ or $\frac{s}{\sqrt{2}}$}} }. 
+  
+  
+ \clearpage 
+  
+  
+  
+  
+  
+  
+  
+   \section{Problem \#4}
+  \par
+  The number of students playing the game of 'society' is $n$. Designate them as $p_i, i = 1 , 2 , \cdot, n$.  Each student has some amount of money. Suppose $\vec{x} = (x_1, x_2, \cdots, x_n)$ is the the money vector of the students where $x_i$ is the amount of money the student $p_i$ has and $x_i \in \mathbb{Z}$. At initial suppose the amount of money $p_i$ has is $x_i=y_i$. Therefore money vector in this case is $\vec{x} = \vec{p} = (y_1, y_2, \cdots, y_n)$.
+  The total amount of money of the system of these n students at initial is\[
+  \vec{1}^T\vec{x} = \sum_{i = 1}^nx_i = \sum_{i=1}^ny_i= m\quad(let)
+  \]where $\vec{1} = (1,1,..n\: times)$ . Throughout the game the the transaction of money remains closed among these n students, so m remains constant.\par
+   
+  Each of the n students have some friends or possible none. A move consists of some student giving \$1 to each of his friends his friends. If $p_j$ has $k_j$ friends, then on the move when $p_j$ takes his turn, the the change in the money vector is $ S_{*j}=(s_{1j},s_{2j},\cdots,s_{nj}) $ where $s_{ij}= +1$ if $p_j$ is friends with  $p_i$, $s_{ij}=0 $ if $p_j$ is not  friends with $p_i$ and $s_{jj} = -k_j$. After some moves the change in the money vector is another n-dimensional vector which is a linear combinations of the vectors $S_{*j}'s,j = 1 , 2 , \cdots, n$. For example if the students take turn in this manner \( \{p_1, p_1, p_2, p_5, p_2\}\) then the money vector after these 5 moves will be
+  \[
+  \vec{x} = \vec{y} + 2S_{*1} + 2S_{*2} + S_{*5}
+  \]
+  Suppose after some moves the the distribution of money is $\vec{x}= \vec{z} = (z_1, z_2, \cdots,z_n)$. Let $\vec{u}=(u_1, u_2, \cdots,u_n)$ be the vector of moves where $u_i$ denotes the number of moves when $p_i$ took his turn. Define a $n\times n$ matrix $\boldsymbol{S} = \{S_{*1}:S_{*2}:\cdots:S_{*n}\}$. So the change is money can be described by the following matrix equation\[
+  \vec{y} + \boldsymbol{S}\vec{u} = \vec{z}
+  \]
+  We note that \(\vec{1}^TS_{*j} = (-k_j + 1 + 1 + \cdots k_j\, times) = 0\). Therefore \(\vec{1}^T\mat{S} = (0,0,...,0).\) So the total amount of money is \[
+  \vec{1}^T\vec{z} =  \vec{1}^T\vec{y} + \vec{1}^T\mat{S}\vec{u} = \vec{1}^T\vec{y}= m.
+  \]
+  Before proceeding further we note two facts:\\
+  (1) Each student must have at least one friend. To show this suppose w.l.o.g. $p_1$
+  has no friends and rest of them are friends among them selves. It is given that the game is fair. So if we want to get such a money distribution with total money constant where $x_1$ also changes then it will not be possible because $p_1$ cannot give money to or receive money from any student, which contradicts the fairness of the game.\\
+  (2) There cannot be any separate group of students who are friends among themselves and have no connection with the rest of the students. Because if there was then  a distribution where we wanted the total money of that system to be different from the initial will be unachievable as no money is going out or coming in due to the lack of friendship with the rest.\par
+  $\therefore{} k_i \neq 0 , i = 1,2,...,n$
+  
+  We see that $\mat{S}$ is a symmetric matrix. To show this, suppose $p_i$ and $p_j$ are friends. So if $p_i$ gives money to $p_j$ so does $p_j $ to $p_i$. there for both $s_{ji} = s_{ij} = +1$ and the rest of the elements are zero. So $\mat{S}$ is symmetric.
+  \[Now, \, \vec{1}^T\mat{S} = (0,0,..,0)\implies \mat{S}\vec{1} = (0,0,..,0)^T\]
+  $\therefore{}\vec{1} \in \mathcal{N}(\mat{S})$. We have seen that $S_{*j}^T\vec{1} = 0  \forall{j}$(since $\mat{S}$ is symmetric), therefore the matrix product of $\vec{1}$ with all linear combinations of columns of $\mat{S}$ is zero. This is also the usual dot product ($\langle.,.\rangle$)in an euclidean space. So we find that $\vec{1} \perp \mathcal{C}(\mat{S})$. 
+  Consider the $n\times(n-1)$ matrix below,\par
+  $\begin{bmatrix}
+  1&1&1&\cdots&\cdots&1\\
+  -1&-0&0&\cdots&\cdots&0\\
+  0&-1&0&&&0\\
+  \vdots&\vdots&&\ddots&&\vdots\\
+  \vdots&\vdots&&&\ddots&\\
+  0&0&0&\cdots&\cdots&-1
+  \end{bmatrix}$= A\\
+  All the (n-1) columns of the matrix above are linearly independent, because if there existed such a n-dimensional vector $\vec{a}$ = ($a_1, a_2, ..,a_{n-1}$) with \[
+  \mat{A}\vec{a}=0 \implies
+  \begin{pmatrix}\sum a_i\\a_1\\a_2\\.\\.\\a_{n-1}\end{pmatrix} = 0 \implies a_i = 0 \forall{i}
+  \]
+  We see that all the columns of $\mat{S}$ are the linear combinations of the columns of $\mat{A}$. So there exists a matrix $\mat{C}$ such that $\mat{AC = S}$. Hence all linear combinations of columns of $\mat{S}$ are also the linear combinations of the columns from $\mat{A}$. So we conclude $\mathcal{C}(\mat{A})= \mathcal{C}(\mat{S})$ and rank of $\mat{S}$ is $\rho(\mat{s}) = (n-1)$.
+  
+  Now we see there are total n number  of student. Therefore total number of possible friendships are $\binom{n}{2}$ . let us define the transaction due to the friendship between $p_i$ and $p_j$ by $(x_1, x_2,...,x_n)$ where $x_i = 1,x_j=-1$ and rest are 0. This is the transaction from j to i, and negative of this vector is the opposite transaction. Both are similar transaction therefore we consider only one transaction.
+  \\
+  Let, $F = \{(x_1, x_2, ...,x_n)| x_i = +1, x_j=-1, 1\leq i<j\geq n\}$ so cardinality of F is $\binom{n}{2}$.
+F is the set of all possible transaction vectors, meanwhile all possible friendships. And $\mat{S}$ is the transaction matrix which gives us the final transaction after some moves. We have seen that for all possible changes in the distribution of money $(\vec{z} - \vec{y})$ to occur the rank of $\mat{S}$ must be (n-1). Therefore every column of $\mat{s}$ must be a linear combination of (n-1) linearly independent vectors such that $\rho(\mat{S}) = (n-1)$.\par
+\noindent
+\textbf{Method of getting such an $\mat{S}$ from F }\\
+(1) We choose (n-1) vectors such that atleast one of them has $\pm1$ at the ith position for all i's, this way we get (n-1) linearly independent vectors. and also consider the set of negative of those vectors.
+(2) next to get the jth column we sum up the vectors for which the jth element is +1. and thus we find $\mat{s}$.
+ 
+ Based on the above calculations We see that that there has to be at least  (n-1) possible friendships for the game to be fair. To prove that (n-1) is the only possible number of friendships for the game to be fair we note that all the vectors in F belongs to the column space of $\mat{A}$ which is same as the span of those (n-1) vectors. let us take one vector which is not among those (n-1) vectors , which means a new friendship. If it is the friendship between $p_l$ and $p_k$ then the new matrix is $\mat{S + B}$ where $B_{n\times n}$ is a matrix with $(B)_{kk} = (B)_{ll} = 1, (B)_{kl}=(B)_{lk} = -1$ . Let We got the result $\mat{S}\vec{u} = \vec{v}$ with all of elements of $\vec{u}$ being positive integer as these are number of moves. Let another vectors of moves $\vec{t}$ such that $\mat{(S+B)}\vec{t} = \vec{v}$.\par
+ \begin{equation*}\begin{split}
+ &\mat{B}\vec{t} = \vec{v} - \mat{S}\vec{t}\\
+ &\begin{pmatrix}0\\.\\t_k - t_l\\.\\0\\.\\t_l-t_k\\.\\0\end{pmatrix} = \mat{S}\begin{pmatrix}u_1 - t_1\\.\\u_k- t_k\\.\\.\\.\\u_l-t_l\\.\\u_n-t_n\end{pmatrix}
+ \end{split}
+ \end{equation*}
+ there is no guaranty that the solution for the vector $\vec{t}$ will have all integers for it's elements. Again as it belongs to the span of those (n-1) vectors for some cases the rand of the matrix $\mat{s}$ vanishes. If we choose more than one vector belonging to the span we may face similar problems, which means the game will not be fair.
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+\clearpage  
+\section{Appendix}
+\textbf{Relation between \emph{Fibonacci Series} and \emph{Golden Ratio}}\par
+The Fibonacci numbers are uniquely determined from their recursion relation,
+\[F_{n+1} = F_n + F_{n-1}\]
+and the initial values, $F_1 = F_2 = 1$\\
+Divided by $F_n$ yields, 
+\begin{equation*}
+\begin{split}
+\frac{F_{n+1}}{F_n} = 1 + \frac{F_{n-1}}{F_n}\\
+\frac{F_{n+1}}{F_n}- \frac{F_n}{F_{n-1}}& =  \frac{F_{n-1}}{F_n} - \frac{F_{n-2}}{F_{n-1}}\\&= \frac{F_{n-1}^2 - F_{n-2}F_n}{F_nF_{n-1}}\\& = \frac{(-1)^n}{F_nF_{n-1}}\\
+\end{split}
+\end{equation*}
+
+We see the difference between the ratios decreases gradually. If we fix $\epsilon>0 $ then for the choice of a natural number $n>\frac{1}{\epsilon}$ we see that $\frac{(-1)^m}{F_mF_{m-1}} =\frac{F_{m+1}}{F_m}- \frac{F_m}{F_{m-1}}<\epsilon, \forall{m}>n $.
+We assume that the ratio of two consecutive Fibonacci numbers approaches a limit as $n \rightarrow{ \infty}$ . Define
+$\lim_{ n \rightarrow{ \infty}}$ $F_{n+1}/F_n = \alpha$ so that $\lim_{n \rightarrow{\infty}}$ $F_{n-1}/F_n = 1/\alpha$. Taking the limit becomes, \[\alpha = 1 + \frac{1}{\alpha}\] the
+same identity satisfied by the golden ratio. Solving we get\\
+
+\begin{equation*}
+\begin{split}
+   & \alpha^2 = \alpha + 1 \\
+    \mbox{or,}& \alpha^2 - \alpha - 1 = 0 \\
+    \mbox{or,}& \alpha = \frac{1\pm \sqrt{5}}{2} 
+   \end{split}
+\end{equation*}
+\[\alpha = \frac{1+\sqrt{5}}{2} = \varphi\]
+
+Therefore, if the limit exists, the ratio of two consecutive
+Fibonacci numbers must approach the golden ratio for large n, i.e,
+\[\lim{n \rightarrow{\infty}}\frac{F_{n+1}}{F_n} = \varphi\]
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+\end{document}
